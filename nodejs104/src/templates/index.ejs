@@ -1,0 +1,29 @@
+<%- include("_header") %>
+
+<h1>Todos (<%= model.length %>)</h1>
+
+<div class="table-responsive-sm">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>
+                    <a href="/create" class="btn btn-sm btn-success">Create</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(const todo of model){ %>
+                <tr>
+                    <td><%= todo.Title %></td>
+                    <td>
+                        <a href="#" class="btn btn-sm btn-warning">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+<%- include("_footer") %>
